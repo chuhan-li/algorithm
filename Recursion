@@ -1,0 +1,7 @@
+Recursion 递归 - call self
+
+结构
+base case 终止条件 + recursion relation 大小问题的关系
+
+在计算机中的实现
+函数调用 -> stack

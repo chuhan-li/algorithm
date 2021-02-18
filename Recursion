@@ -5,3 +5,41 @@ base case 终止条件 + recursion relation 大小问题的关系
 
 在计算机中的实现
 函数调用 -> stack
+
+
+recursion的 三种形式
+重复计算 - memo #eg Fibonacci
+结合子问题结果 - divide and conquer #eg valid BST
+返回所有满足条件的结果 - backtracking #eg generate all valid parentheses
+
+- memoization
+  · 子问题有重复 直接查看memo
+  
+- divide and conquer分治
+  · divide + conquer + combine
+  · 代码模版
+    public void divideAndConquer(s) {
+      /*divide into subproblems*/
+      s -> s1, s2, s3, ...
+      /*solve subproblems recursively*/
+      res = divideAndConquer(for sn in s)
+      /*combine result*/
+      return combine(res)
+    }
+    
+- backtracking 回溯
+  · 在违法的边缘疯狂试探： 一旦违法，立刻退一步
+  · 代码模版
+    backtrack():
+      if findSolution:
+        res.add(solution)
+        return
+    
+      for each option:
+        if not valid: return
+        if valid: 
+          place the option
+          backtrack()
+          remove the option
+
+*refer to: https://www.youtube.com/watch?v=AqGagBmFXgw

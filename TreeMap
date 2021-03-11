@@ -1,0 +1,24 @@
+https://blog.csdn.net/IT_ZJYANG/article/details/51867143
+
+
+*基于红黑树*
+
+HashMap和TreeMap本质区别
+先看HashMap的定义：
+
+public class HashMap<K,V> extends AbstractMap<K,V>
+    implements Map<K,V>, Cloneable, Serializable
+再看TreeMap的定义：
+
+public class TreeMap<K,V>
+    extends AbstractMap<K,V>
+    implements NavigableMap<K,V>, Cloneable, java.io.Serializable
+从类的定义来看，HashMap和TreeMap都继承自AbstractMap，不同的是HashMap实现的是Map接口，而TreeMap实现的是NavigableMap接口。NavigableMap是SortedMap的一种，实现了对Map中key的排序。
+
+这样两者的第一个区别就出来了，TreeMap是排序的而HashMap不是。
+
+再看看HashMap和TreeMap的构造函数的区别。
+
+public HashMap(int initialCapacity, float loadFactor) 
+HashMap除了默认的无参构造函数之外，还可以接受两个参数initialCapacity和loadFactor。
+
